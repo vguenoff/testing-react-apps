@@ -30,23 +30,23 @@
 ## Learn more about these tasks at 'https://www.gitpod.io/docs/config-start-tasks'
 
 tasks:
-  - name: App
-    init: npm install
-    command: npm run start
-    openMode: split-left
+    - name: App
+      init: npm install
+      command: npm run start
+      openMode: split-left
 
-  - name: Test
-    command: npm run test
-    openMode: split-right
+    - name: Test
+      command: npm run test
+      openMode: split-right
 
-  - name: Set up email
-    command: |
-      clear
-      printf "\n\n\n"
-      printf "\u001b[36;1mAutofilling Email\u001b[0m\n"
-      printf "\u001b[2;1mEach exercise comes with a elaboration form to help your retention. Providing your email now will mean you don't have to provide it each time you fill out the form.\u001b[0m\n"
-      npx "https://gist.github.com/kentcdodds/2d44448a8997b9964b1be44cd294d1f5" \
-        && exit 0
+    - name: Set up email
+      command: |
+          clear
+          printf "\n\n\n"
+          printf "\u001b[36;1mAutofilling Email\u001b[0m\n"
+          printf "\u001b[2;1mEach exercise comes with a elaboration form to help your retention. Providing your email now will mean you don't have to provide it each time you fill out the form.\u001b[0m\n"
+          npx "https://gist.github.com/kentcdodds/2d44448a8997b9964b1be44cd294d1f5" \
+            && exit 0
 ## The 'ports' section defines various ports your may listen on are
 ## configured in Gitpod on an authenticated URL. By default, all ports
 ## are in private visibility state.
@@ -54,9 +54,9 @@ tasks:
 ## Learn more about ports at 'https://www.gitpod.io/docs/config-ports'
 
 ports:
-  - port: 3000 # alternatively configure entire ranges via '8080-8090'
-    visibility: private # either 'public' or 'private' (default)
-    onOpen: open-browser # either 'open-browser', 'open-preview' or 'ignore'
+    - port: 3000 # alternatively configure entire ranges via '8080-8090'
+      visibility: private # either 'public' or 'private' (default)
+      onOpen: open-browser # either 'open-browser', 'open-preview' or 'ignore'
 
 ## The 'vscode' section defines a list of Visual Studio Code extensions from
 ## the OpenVSX.org registry to be installed upon workspace startup. OpenVSX
@@ -71,12 +71,12 @@ ports:
 ## Learn more at 'https://www.gitpod.io/docs/ides-and-editors/vscode'
 
 vscode:
-  extensions:
-    - VisualStudioExptTeam.vscodeintellicode
-    - dbaeumer.vscode-eslint
-    - formulahendry.auto-rename-tag
-    - esbenp.prettier-vscode
-    - ms-azuretools.vscode-docker
+    extensions:
+        - VisualStudioExptTeam.vscodeintellicode
+        - dbaeumer.vscode-eslint
+        - formulahendry.auto-rename-tag
+        - esbenp.prettier-vscode
+        - ms-azuretools.vscode-docker
 
 ## The 'github' section defines configuration of continuous prebuilds
 ## for GitHub repositories when the GitHub application
@@ -86,18 +86,18 @@ vscode:
 ## Learn more at 'https://www.gitpod.io/docs/prebuilds'
 
 github:
-  prebuilds:
-    # enable for the default branch
-    master: true
-    # enable for all branches in this repo
-    branches: false
-    # enable for pull requests coming from this repo
-    pullRequests: false
-    # enable for pull requests coming from forks
-    pullRequestsFromForks: false
-    # add a check to pull requests
-    addCheck: false
-    # add a "Review in Gitpod" button as a comment to pull requests
-    addComment: false
-    # add a "Review in Gitpod" button to the pull request's description
-    addBadge: false
+    prebuilds:
+        # enable for the default branch
+        master: true
+        # enable for all branches in this repo
+        branches: false
+        # enable for pull requests coming from this repo
+        pullRequests: false
+        # enable for pull requests coming from forks
+        pullRequestsFromForks: false
+        # add a check to pull requests
+        addCheck: false
+        # add a "Review in Gitpod" button as a comment to pull requests
+        addComment: false
+        # add a "Review in Gitpod" button to the pull request's description
+        addBadge: false

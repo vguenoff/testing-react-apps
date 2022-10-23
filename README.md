@@ -29,10 +29,10 @@
 
 ## Prerequisites
 
-- Read
-  [But really, what is a JavaScript Test?](https://kentcdodds.com/blog/but-really-what-is-a-javascript-test)
-- Read
-  [But really, what is a JavaScript Mock?](https://kentcdodds.com/blog/but-really-what-is-a-javascript-mock)
+-   Read
+    [But really, what is a JavaScript Test?](https://kentcdodds.com/blog/but-really-what-is-a-javascript-test)
+-   Read
+    [But really, what is a JavaScript Mock?](https://kentcdodds.com/blog/but-really-what-is-a-javascript-mock)
 
 > NOTE: The EpicReact.dev videos were recorded with React version ^16.13 and all
 > material in this repo has been updated to React version ^18. Differences are
@@ -53,9 +53,9 @@ For a local development environment, follow the instructions below
 
 ## System Requirements
 
-- [git][git] v2.13 or greater
-- [NodeJS][node] `14 || 16 || 18`
-- [npm][npm] v8.16.0 or greater
+-   [git][git] v2.13 or greater
+-   [NodeJS][node] `14 || 16 || 18`
+-   [npm][npm] v8.16.0 or greater
 
 All of these must be available in your `PATH`. To verify things are set up
 properly, you can run this:
@@ -141,11 +141,11 @@ a complete authority.
 
 ### Exercises
 
-- `src/__tests__/exercise/00.md`: Background, Exercise Instructions, Extra
-  Credit
-- `src/__tests__/exercise/00.js`: Exercise with Emoji helpers
-- `src/__tests__/final/00.js`: Final version
-- `src/__tests__/final/00.extra-0.js`: Final version of extra credit
+-   `src/__tests__/exercise/00.md`: Background, Exercise Instructions, Extra
+    Credit
+-   `src/__tests__/exercise/00.js`: Exercise with Emoji helpers
+-   `src/__tests__/final/00.js`: Final version
+-   `src/__tests__/final/00.extra-0.js`: Final version of extra credit
 
 The purpose of the exercise is **not** for you to work through all the material.
 It's intended to get your brain thinking about the right questions to ask me as
@@ -156,23 +156,23 @@ _I_ walk through the material.
 Each exercise has comments in it to help you get through the exercise. These fun
 emoji characters are here to help you.
 
-- **Kody the Koala** 🐨 will tell you when there's something specific you should
-  do
-- **Matthew the Muscle** 💪 will indicate that you're working with an exercise
-- **Chuck the Checkered Flag** 🏁 will indicate that you're working with a final
-  version
-- **Marty the Money Bag** 💰 will give you specific tips (and sometimes code)
-  along the way
-- **Hannah the Hundred** 💯 will give you extra challenges you can do if you
-  finish the exercises early.
-- **Olivia the Owl** 🦉 will give you useful tidbits/best practice notes and a
-  link for elaboration and feedback.
-- **Dominic the Document** 📜 will give you links to useful documentation
-- **Berry the Bomb** 💣 will be hanging around anywhere you need to blow stuff
-  up (delete code)
-- **Peter the Product Manager** 👨‍💼 helps us know what our users want
-- **Alfred the Alert** 🚨 will occasionally show up in the test failures with
-  potential explanations for why the tests are failing.
+-   **Kody the Koala** 🐨 will tell you when there's something specific you
+    should do
+-   **Matthew the Muscle** 💪 will indicate that you're working with an exercise
+-   **Chuck the Checkered Flag** 🏁 will indicate that you're working with a
+    final version
+-   **Marty the Money Bag** 💰 will give you specific tips (and sometimes code)
+    along the way
+-   **Hannah the Hundred** 💯 will give you extra challenges you can do if you
+    finish the exercises early.
+-   **Olivia the Owl** 🦉 will give you useful tidbits/best practice notes and a
+    link for elaboration and feedback.
+-   **Dominic the Document** 📜 will give you links to useful documentation
+-   **Berry the Bomb** 💣 will be hanging around anywhere you need to blow stuff
+    up (delete code)
+-   **Peter the Product Manager** 👨‍💼 helps us know what our users want
+-   **Alfred the Alert** 🚨 will occasionally show up in the test failures with
+    potential explanations for why the tests are failing.
 
 ## Contributors
 

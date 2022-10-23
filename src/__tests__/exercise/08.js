@@ -13,10 +13,10 @@ import useCounter from '../../components/use-counter'
 // const {count, increment, decrement} = useCounter()
 
 test('exposes the count and increment/decrement functions', () => {
-  // 🐨 render the component
-  // 🐨 get the elements you need using screen
-  // 🐨 assert on the initial state of the hook
-  // 🐨 interact with the UI using userEvent and assert on the changes in the UI
+    // 🐨 render the component
+    // 🐨 get the elements you need using screen
+    // 🐨 assert on the initial state of the hook
+    // 🐨 interact with the UI using userEvent and assert on the changes in the UI
 })
 
 /* eslint no-unused-vars:0 */

@@ -3,9 +3,9 @@
 
 import * as React from 'react'
 // 🐨 you'll need to grab waitForElementToBeRemoved from '@testing-library/react'
-import {render, screen} from '@testing-library/react'
+import { render, screen } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import {build, fake} from '@jackfranklin/test-data-bot'
+import { build, fake } from '@jackfranklin/test-data-bot'
 // 🐨 you'll need to import rest from 'msw' and setupServer from msw/node
 import Login from '../../components/login-submission'
 
@@ -30,7 +30,7 @@ const buildLoginForm = build({
 
 test(`logging in displays the user's username`, async () => {
     render(<Login />)
-    const {username, password} = buildLoginForm()
+    const { username, password } = buildLoginForm()
 
     await userEvent.type(screen.getByLabelText(/username/i), username)
     await userEvent.type(screen.getByLabelText(/password/i), password)

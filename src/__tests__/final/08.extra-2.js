@@ -3,10 +3,10 @@
 // http://localhost:3000/counter-hook
 
 import * as React from 'react'
-import {render, act} from '@testing-library/react'
+import { render, act } from '@testing-library/react'
 import useCounter from '../../components/use-counter'
 
-function setup({initialProps} = {}) {
+function setup({ initialProps } = {}) {
     const result = {}
     function TestComponent() {
         result.current = useCounter(initialProps)
@@ -26,12 +26,12 @@ test('exposes the count and increment/decrement functions', () => {
 })
 
 test('allows customization of the initial count', () => {
-    const result = setup({initialProps: {initialCount: 3}})
+    const result = setup({ initialProps: { initialCount: 3 } })
     expect(result.current.count).toBe(3)
 })
 
 test('allows customization of the step', () => {
-    const result = setup({initialProps: {step: 2}})
+    const result = setup({ initialProps: { step: 2 } })
     expect(result.current.count).toBe(0)
     act(() => result.current.increment())
     expect(result.current.count).toBe(2)

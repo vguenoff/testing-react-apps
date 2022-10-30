@@ -2,7 +2,7 @@
 // NOTE: this component wont work by itself, so we have the example :)
 
 import * as React from 'react'
-import {useTheme} from './theme'
+import { useTheme } from './theme'
 
 const styles = {
     dark: {

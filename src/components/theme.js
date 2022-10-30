@@ -12,9 +12,9 @@ function useTheme() {
     return context
 }
 
-function ThemeProvider({initialTheme = 'light', ...props}) {
+function ThemeProvider({ initialTheme = 'light', ...props }) {
     const [theme, setTheme] = React.useState(initialTheme)
     return <ThemeContext.Provider value={[theme, setTheme]} {...props} />
 }
 
-export {useTheme, ThemeProvider}
+export { useTheme, ThemeProvider }

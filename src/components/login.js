@@ -4,10 +4,10 @@
 
 import * as React from 'react'
 
-function Login({onSubmit}) {
+function Login({ onSubmit }) {
     function handleSubmit(event) {
         event.preventDefault()
-        const {username, password} = event.target.elements
+        const { username, password } = event.target.elements
 
         onSubmit({
             username: username.value,

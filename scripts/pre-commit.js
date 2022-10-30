@@ -1,5 +1,5 @@
 var spawnSync = require('child_process').spawnSync
-const {username} = require('os').userInfo()
+const { username } = require('os').userInfo()
 
 if (username === 'kentcdodds') {
     const result = spawnSync('npm run validate', {

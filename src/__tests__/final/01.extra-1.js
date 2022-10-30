@@ -3,8 +3,8 @@
 // http://localhost:3000/counter
 
 import * as React from 'react'
-import {act} from 'react-dom/test-utils'
-import {createRoot} from 'react-dom/client'
+import { act } from 'react-dom/test-utils'
+import { createRoot } from 'react-dom/client'
 import Counter from '../../components/counter'
 
 // NOTE: this is a new requirement in React 18

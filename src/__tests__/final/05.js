@@ -2,11 +2,15 @@
 // http://localhost:3000/login-submission
 
 import * as React from 'react'
-import {render, screen, waitForElementToBeRemoved} from '@testing-library/react'
+import {
+    render,
+    screen,
+    waitForElementToBeRemoved,
+} from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
-import {build, fake} from '@jackfranklin/test-data-bot'
-import {rest} from 'msw'
-import {setupServer} from 'msw/node'
+import { build, fake } from '@jackfranklin/test-data-bot'
+import { rest } from 'msw'
+import { setupServer } from 'msw/node'
 import Login from '../../components/login-submission'
 
 const buildLoginForm = build({
@@ -23,16 +27,16 @@ const server = setupServer(
             if (!req.body.password) {
                 return res(
                     ctx.status(400),
-                    ctx.json({message: 'password required'}),
+                    ctx.json({ message: 'password required' }),
                 )
             }
             if (!req.body.username) {
                 return res(
                     ctx.status(400),
-                    ctx.json({message: 'username required'}),
+                    ctx.json({ message: 'username required' }),
                 )
             }
-            return res(ctx.json({username: req.body.username}))
+            return res(ctx.json({ username: req.body.username }))
         },
     ),
 )
@@ -42,11 +46,11 @@ afterAll(() => server.close())
 
 test(`logging in displays the user's username`, async () => {
     render(<Login />)
-    const {username, password} = buildLoginForm()
+    const { username, password } = buildLoginForm()
 
     await userEvent.type(screen.getByLabelText(/username/i), username)
     await userEvent.type(screen.getByLabelText(/password/i), password)
-    await userEvent.click(screen.getByRole('button', {name: /submit/i}))
+    await userEvent.click(screen.getByRole('button', { name: /submit/i }))
 
     await waitForElementToBeRemoved(() => screen.getByLabelText(/loading/i))
 

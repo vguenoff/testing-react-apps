@@ -13,7 +13,7 @@ import Spinner from './spinner'
 function formSubmissionReducer(state, action) {
     switch (action.type) {
         case 'START': {
-            return {status: 'pending', responseData: null, errorMessage: null}
+            return { status: 'pending', responseData: null, errorMessage: null }
         }
         case 'RESOLVE': {
             return {
@@ -34,7 +34,7 @@ function formSubmissionReducer(state, action) {
     }
 }
 
-function useFormSubmission({endpoint, data}) {
+function useFormSubmission({ endpoint, data }) {
     const [state, dispatch] = React.useReducer(formSubmissionReducer, {
         status: 'idle',
         responseData: null,
@@ -45,7 +45,7 @@ function useFormSubmission({endpoint, data}) {
 
     React.useEffect(() => {
         if (fetchBody) {
-            dispatch({type: 'START'})
+            dispatch({ type: 'START' })
             window
                 .fetch(endpoint, {
                     method: 'POST',
@@ -57,9 +57,9 @@ function useFormSubmission({endpoint, data}) {
                 .then(async response => {
                     const data = await response.json()
                     if (response.ok) {
-                        dispatch({type: 'RESOLVE', responseData: data})
+                        dispatch({ type: 'RESOLVE', responseData: data })
                     } else {
-                        dispatch({type: 'REJECT', error: data})
+                        dispatch({ type: 'REJECT', error: data })
                     }
                 })
         }
@@ -70,7 +70,7 @@ function useFormSubmission({endpoint, data}) {
 
 function LoginSubmission() {
     const [formData, setFormData] = React.useState(null)
-    const {status, responseData, errorMessage} = useFormSubmission({
+    const { status, responseData, errorMessage } = useFormSubmission({
         endpoint: 'https://auth-provider.example.com/api/login',
         data: formData,
     })
@@ -84,10 +84,10 @@ function LoginSubmission() {
             ) : (
                 <Login onSubmit={data => setFormData(data)} />
             )}
-            <div style={{height: 200}}>
+            <div style={{ height: 200 }}>
                 {status === 'pending' ? <Spinner /> : null}
                 {status === 'rejected' ? (
-                    <div role="alert" style={{color: 'red'}}>
+                    <div role="alert" style={{ color: 'red' }}>
                         {errorMessage}
                     </div>
                 ) : null}

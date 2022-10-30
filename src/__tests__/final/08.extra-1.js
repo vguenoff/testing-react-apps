@@ -3,7 +3,7 @@
 // http://localhost:3000/counter-hook
 
 import * as React from 'react'
-import {render, act} from '@testing-library/react'
+import { render, act } from '@testing-library/react'
 import useCounter from '../../components/use-counter'
 
 test('exposes the count and increment/decrement functions', () => {

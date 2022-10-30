@@ -2,7 +2,7 @@
 // http://localhost:3000/location
 
 import * as React from 'react'
-import {render, screen, act} from '@testing-library/react'
+import { render, screen, act } from '@testing-library/react'
 import Location from '../../examples/location'
 
 // 🐨 set window.navigator.geolocation to an object that has a getCurrentPosition mock function
@@ -15,7 +15,7 @@ function deferred() {
         resolve = res
         reject = rej
     })
-    return {promise, resolve, reject}
+    return { promise, resolve, reject }
 }
 // 💰 Here's an example of how you use this:
 // const {promise, resolve, reject} = deferred()

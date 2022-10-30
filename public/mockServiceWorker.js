@@ -141,7 +141,7 @@ async function handleRequest(event, requestId) {
 }
 
 async function getResponse(event, client, requestId) {
-    const {request} = event
+    const { request } = event
     const requestClone = request.clone()
     const getOriginalResponse = () => fetch(requestClone)
 
@@ -210,7 +210,7 @@ async function getResponse(event, client, requestId) {
         }
 
         case 'NETWORK_ERROR': {
-            const {name, message} = clientMessage.payload
+            const { name, message } = clientMessage.payload
             const networkError = new Error(message)
             networkError.name = name
 
@@ -241,7 +241,7 @@ This exception has been gracefully handled as a 500 response, however, it's stro
 }
 
 self.addEventListener('fetch', function (event) {
-    const {request} = event
+    const { request } = event
     const accept = request.headers.get('accept') || ''
 
     // Bypass server-sent events.

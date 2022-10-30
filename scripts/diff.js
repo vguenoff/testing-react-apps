@@ -1,4 +1,4 @@
-const {spawnSync} = require('child_process')
+const { spawnSync } = require('child_process')
 const inquirer = require('inquirer')
 const glob = require('glob')
 
@@ -8,7 +8,7 @@ async function go() {
             ignore: ['*.d.ts'],
         })
         .map(f => f.replace(/^src\/__tests__\//, ''))
-    const {first} = await inquirer.prompt([
+    const { first } = await inquirer.prompt([
         {
             name: 'first',
             message: `What's the first file`,
@@ -16,7 +16,7 @@ async function go() {
             choices: files,
         },
     ])
-    const {second} = await inquirer.prompt([
+    const { second } = await inquirer.prompt([
         {
             name: 'second',
             message: `What's the second file`,

@@ -1,5 +1,5 @@
 import * as React from 'react'
-import {useCurrentPosition} from 'react-use-geolocation'
+import { useCurrentPosition } from 'react-use-geolocation'
 import Spinner from '../components/spinner'
 
 function Location() {
@@ -11,7 +11,7 @@ function Location() {
 
     if (error) {
         return (
-            <div role="alert" style={{color: 'red'}}>
+            <div role="alert" style={{ color: 'red' }}>
                 {error.message}
             </div>
         )

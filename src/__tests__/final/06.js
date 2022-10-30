@@ -2,7 +2,7 @@
 // http://localhost:3000/location
 
 import * as React from 'react'
-import {render, screen, act} from '@testing-library/react'
+import { render, screen, act } from '@testing-library/react'
 import Location from '../../examples/location'
 
 beforeAll(() => {
@@ -17,7 +17,7 @@ function deferred() {
         resolve = res
         reject = rej
     })
-    return {promise, resolve, reject}
+    return { promise, resolve, reject }
 }
 
 test('displays the users current location', async () => {
@@ -27,7 +27,7 @@ test('displays the users current location', async () => {
             longitude: 139,
         },
     }
-    const {promise, resolve} = deferred()
+    const { promise, resolve } = deferred()
     window.navigator.geolocation.getCurrentPosition.mockImplementation(
         callback => {
             promise.then(() => callback(fakePosition))
